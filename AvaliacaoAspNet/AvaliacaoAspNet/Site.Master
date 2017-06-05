@@ -54,6 +54,10 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/Views/AkumaNoMis/CadastroAkumaNoMi.aspx">Cadastro</a></li>
+                        <li><a runat="server" href="~/Views/AkumaNoMis/ListarAkumaNoMi.aspx">Listar Akuma</a></li>
+                        <li><a runat="server" href="~/Views/Tipos/CadastroTipo.aspx">Cadastro Tipo</a></li>
+                        <li><a runat="server" href="~/Views/Tipos/ListarTipos.aspx">Listar Tipo</a></li>
                     </ul>
                 </div>
             </div>

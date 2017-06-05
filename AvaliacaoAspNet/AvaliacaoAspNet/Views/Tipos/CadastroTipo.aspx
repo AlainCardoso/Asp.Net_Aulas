@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroTipo.aspx.cs" Inherits="AvaliacaoAspNet.Views.Tipos.CadastroTipo" %>
+﻿<%@ Page Title="CadastroTipos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroTipo.aspx.cs" Inherits="AvaliacaoAspNet.Views.Tipos.CadastroTipo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="style1">Tipos de Akuma No Mi - Cadastro:</h2>
     <table>

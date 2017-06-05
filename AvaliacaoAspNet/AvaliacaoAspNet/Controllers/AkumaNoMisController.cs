@@ -6,9 +6,8 @@ using AvaliacaoAspNet.Models;
 
 namespace AvaliacaoAspNet.Controllers
 {
-    public class AkumaNoMisController
+    public class AkumaNoMisController:BaseController
     {
-        static protected BaseDadosContainer contexto = new BaseDadosContainer();
 
         static public void Adicionar(AkumaNoMi Ak)
         {

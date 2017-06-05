@@ -13,10 +13,10 @@ namespace AvaliacaoAspNet.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BaseDadosContainer : DbContext
+    public partial class BaseDadosContainer2 : DbContext
     {
-        public BaseDadosContainer()
-            : base("name=BaseDadosContainer")
+        public BaseDadosContainer2()
+            : base("name=BaseDadosContainer2")
         {
         }
     

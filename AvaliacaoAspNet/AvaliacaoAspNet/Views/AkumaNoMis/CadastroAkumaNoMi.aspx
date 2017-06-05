@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroAkumaNoMi.aspx.cs" Inherits="AvaliacaoAspNet.Views.CadastroAkumaNoMi" %>
+﻿<%@ Page Title="CadastroAkumaNoMi" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastroAkumaNoMi.aspx.cs" Inherits="AvaliacaoAspNet.Views.CadastroAkumaNoMi" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="style1">Akuma No Mi - Cadastro:</h2>

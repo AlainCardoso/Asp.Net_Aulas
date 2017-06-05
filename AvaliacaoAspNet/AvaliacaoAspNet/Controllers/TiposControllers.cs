@@ -6,9 +6,8 @@ using System.Web;
 
 namespace AvaliacaoAspNet.Controllers
 {
-    public class TiposControllers
+    public class TiposControllers:BaseController
     {
-        static protected BaseDadosContainer contexto = new BaseDadosContainer();
 
         static public void Adicionar(Tipo Tipo)
         {

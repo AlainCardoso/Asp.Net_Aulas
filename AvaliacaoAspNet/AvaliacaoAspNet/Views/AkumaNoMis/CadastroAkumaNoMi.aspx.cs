@@ -18,7 +18,7 @@ namespace AvaliacaoAspNet.Views
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            AkumaNoMi Ak = new AkumaNoMi();
+            Models.AkumaNoMi Ak = new Models.AkumaNoMi();
             Tipo Tipo = new Tipo();
             Ak.Nome = txtNome.Text;
             Ak.Descricao = txtDescricao.Text;

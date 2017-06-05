@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/04/2017 21:26:24
--- Generated from EDMX file: C:\Users\Alain\Documents\Faculdade\Asp.net\Aulas\AvaliacaoAspNet\AvaliacaoAspNet\Models\BaseDados.edmx
+-- Date Created: 06/05/2017 08:31:53
+-- Generated from EDMX file: C:\Documentos\Asp.Net_Aulas\AvaliacaoAspNet\AvaliacaoAspNet\Models\BaseDados.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [FarmaciaDB];
+USE [OnePieceDB];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -17,20 +17,11 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK_AkumaNoMiTipo]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[AkumaNoMi] DROP CONSTRAINT [FK_AkumaNoMiTipo];
-GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[AkumaNoMi]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[AkumaNoMi];
-GO
-IF OBJECT_ID(N'[dbo].[Tipo]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Tipo];
-GO
 
 -- --------------------------------------------------
 -- Creating all tables

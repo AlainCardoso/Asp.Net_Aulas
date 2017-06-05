@@ -210,8 +210,10 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Views\AkumaNoMi\CadastroAkumaNoMi.aspx" />
+    <Content Include="Views\AkumaNoMis\CadastroAkumaNoMi.aspx" />
+    <Content Include="Views\AkumaNoMis\ListarAkumaNoMi.aspx" />
     <Content Include="Views\Tipos\CadastroTipo.aspx" />
+    <Content Include="Views\Tipos\ListarTipos.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -243,6 +245,7 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AkumaNoMisController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\TiposControllers.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -297,12 +300,19 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Views\AkumaNoMi\CadastroAkumaNoMi.aspx.cs">
+    <Compile Include="Views\AkumaNoMis\CadastroAkumaNoMi.aspx.cs">
       <DependentUpon>CadastroAkumaNoMi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\AkumaNoMi\CadastroAkumaNoMi.aspx.designer.cs">
+    <Compile Include="Views\AkumaNoMis\CadastroAkumaNoMi.aspx.designer.cs">
       <DependentUpon>CadastroAkumaNoMi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AkumaNoMis\ListarAkumaNoMi.aspx.cs">
+      <DependentUpon>ListarAkumaNoMi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AkumaNoMis\ListarAkumaNoMi.aspx.designer.cs">
+      <DependentUpon>ListarAkumaNoMi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Tipos\CadastroTipo.aspx.cs">
       <DependentUpon>CadastroTipo.aspx</DependentUpon>
@@ -310,6 +320,13 @@
     </Compile>
     <Compile Include="Views\Tipos\CadastroTipo.aspx.designer.cs">
       <DependentUpon>CadastroTipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tipos\ListarTipos.aspx.cs">
+      <DependentUpon>ListarTipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Tipos\ListarTipos.aspx.designer.cs">
+      <DependentUpon>ListarTipos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
