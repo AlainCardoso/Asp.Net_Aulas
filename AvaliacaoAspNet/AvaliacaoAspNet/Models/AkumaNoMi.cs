@@ -12,18 +12,15 @@ namespace AvaliacaoAspNet.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Remedio
+    public partial class AkumaNoMi
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Dosagem { get; set; }
         public string Descricao { get; set; }
-        public string Forma { get; set; }
-        public string Validade { get; set; }
-        public string Tipo { get; set; }
-        public string Estoque { get; set; }
-        public int CategoriaId { get; set; }
+        public string Habilidades { get; set; }
+        public bool Consumido { get; set; }
+        public int TipoId { get; set; }
     
-        public virtual Categoria Categoria { get; set; }
+        public virtual Tipo Tipo { get; set; }
     }
 }

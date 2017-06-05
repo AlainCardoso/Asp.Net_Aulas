@@ -25,7 +25,7 @@ namespace AvaliacaoAspNet.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Remedio> RemedioSet { get; set; }
-        public virtual DbSet<Categoria> CategoriaSet { get; set; }
+        public virtual DbSet<AkumaNoMi> AkumaNoMi { get; set; }
+        public virtual DbSet<Tipo> Tipo { get; set; }
     }
 }

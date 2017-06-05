@@ -12,21 +12,19 @@ namespace AvaliacaoAspNet.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Categoria
+    public partial class Tipo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Categoria()
+        public Tipo()
         {
-            this.Remedios = new HashSet<Remedio>();
+            this.AkumaNoMis = new HashSet<AkumaNoMi>();
         }
     
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public string Recomendacoes { get; set; }
-        public string Ativo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Remedio> Remedios { get; set; }
+        public virtual ICollection<AkumaNoMi> AkumaNoMis { get; set; }
     }
 }
