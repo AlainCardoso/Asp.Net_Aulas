@@ -1,13 +1,36 @@
-﻿
+﻿@model IEnumerable<Aula0706_MVC.Models.Categoria>
+
+
 @{
     ViewBag.Title = "Categorias";
 }
 
 <h2>@ViewBag.Title</h2>
 
-@foreach(string cat in ViewBag.ListaCategorias)
+@*
+    Versao utilizando ViewBag com String
+
+    @foreach(string cat in ViewBag.ListaCategorias)
+    {
+        @Html.ActionLink(@cat, "Index", "Categorias")
+        @: |
+    }
+*@
+
+@foreach (var cat in Model)
 {
-    @Html.ActionLink(@cat, "Index", "Categorias")
-    @: |
+    <dl>
+        <dt>@cat.Nome</dt>
+        @if (!string.IsNullOrEmpty(cat.Descricao))
+        {
+            <dd>@cat.Descricao</dd>
+        }
+        else
+        {
+            <dd>
+                <em>Sem descrição</em>
+            </dd>
+        }
+    </dl>
 }
 
