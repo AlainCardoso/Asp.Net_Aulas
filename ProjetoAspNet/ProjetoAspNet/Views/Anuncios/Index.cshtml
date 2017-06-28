@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProjetoAspNet.Models.Anuncio>
+
+@{
+    ViewBag.Title = "Anúncios";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Anúncie aqui!", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Produto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrição)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Produto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descrição)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.AnuncioID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.AnuncioID }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.AnuncioID })
+        </td>
+    </tr>
+}
+
+</table>
