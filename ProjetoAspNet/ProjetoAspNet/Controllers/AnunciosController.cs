@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using ProjetoAspNet.Models;
+using Microsoft.AspNet.Identity;
 
 namespace ProjetoAspNet
 {
@@ -17,6 +15,8 @@ namespace ProjetoAspNet
         // GET: Anuncios
         public ActionResult Index()
         {
+            var meusAnuncios = db.Anuncios.Where(a => a.UserID == int.Parse(User.Identity.GetUserId()));
+
             return View(db.Anuncios.ToList());
         }
 
@@ -50,6 +50,8 @@ namespace ProjetoAspNet
         {
             if (ModelState.IsValid)
             {
+                int idUsuarioLogando = int.Parse(User.Identity.GetUserId());
+                anuncio.UserID = idUsuarioLogando;
                 db.Anuncios.Add(anuncio);
                 db.SaveChanges();
                 return RedirectToAction("Index");
