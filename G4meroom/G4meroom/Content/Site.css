@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image:url('https://media.giphy.com/media/13JVCGQoE19lRe/giphy.gif');
+    background-size:initial
 }
 
 /* Set padding to keep content from hitting the edges */

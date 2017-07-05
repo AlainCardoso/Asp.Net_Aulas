@@ -74,16 +74,29 @@ namespace G4meroom
         // GET: Anuncios/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
+            string idUsuarioLogando = User.Identity.GetUserId();
+            if (idUsuarioLogando != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Anuncio anuncio = db.Anuncios.Find(id);
+                if (anuncio == null)
+                {
+                    return HttpNotFound();
+                }
+                if (!anuncio.UserID.Equals(idUsuarioLogando))
+                {
+                    //return HttpNotFound();
+                    return View("Error");
+                }
+                return View(anuncio);
             }
-            Anuncio anuncio = db.Anuncios.Find(id);
-            if (anuncio == null)
+            else
             {
-                return HttpNotFound();
+                return RedirectToAction("Login", "Account");
             }
-            return View(anuncio);
         }
 
         // POST: Anuncios/Edit/5
@@ -105,16 +118,29 @@ namespace G4meroom
         // GET: Anuncios/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
+            string idUsuarioLogando = User.Identity.GetUserId();
+            if (idUsuarioLogando != null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Anuncio anuncio = db.Anuncios.Find(id);
+                if (anuncio == null)
+                {
+                    return HttpNotFound();
+                }
+                if (!anuncio.UserID.Equals(idUsuarioLogando))
+                {
+                    //return HttpNotFound();
+                    return View("Error");
+                }
+                return View(anuncio);
             }
-            Anuncio anuncio = db.Anuncios.Find(id);
-            if (anuncio == null)
+            else
             {
-                return HttpNotFound();
+                return RedirectToAction("Login", "Account");
             }
-            return View(anuncio);
         }
 
         // POST: Anuncios/Delete/5
