@@ -1,11 +1,10 @@
-﻿using System.Data.Entity;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 
-namespace ProjetoAspNet.Models
+namespace G4meroom.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -39,6 +38,6 @@ namespace ProjetoAspNet.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<ProjetoAspNet.Models.Anuncio> Anuncios { get; set; }
+        public System.Data.Entity.DbSet<G4meroom.Models.Anuncio> Anuncios { get; set; }
     }
 }

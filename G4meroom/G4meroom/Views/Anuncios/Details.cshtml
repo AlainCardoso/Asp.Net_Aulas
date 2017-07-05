@@ -1,0 +1,42 @@
+﻿@model G4meroom.Models.Anuncio
+
+@{
+    ViewBag.Title = "Detalhes do " + Model.Produto;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Anuncio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Produto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descrição)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descrição)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.AnuncioID }) |
+    @Html.ActionLink("Retornar", "Index")
+</p>

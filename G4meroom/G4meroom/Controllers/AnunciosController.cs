@@ -3,10 +3,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using ProjetoAspNet.Models;
+using G4meroom.Models;
 using Microsoft.AspNet.Identity;
 
-namespace ProjetoAspNet
+namespace G4meroom
 {
     public class AnunciosController : Controller
     {
@@ -15,7 +15,7 @@ namespace ProjetoAspNet
         // GET: Anuncios
         public ActionResult Index()
         {
-            var meusAnuncios = db.Anuncios.Where(a => a.UserID == int.Parse(User.Identity.GetUserId()));
+            var meusAnuncios = db.Anuncios.Where(a => a.UserID.Equals(User.Identity.GetUserId()));
 
             return View(db.Anuncios.ToList());
         }
@@ -38,7 +38,13 @@ namespace ProjetoAspNet
         // GET: Anuncios/Create
         public ActionResult Create()
         {
-            return View();
+            string idUsuarioLogando = User.Identity.GetUserId();
+            if (idUsuarioLogando != null)
+            {
+                return View();
+            }
+            else
+                return RedirectToAction("Login", "Account");
         }
 
         // POST: Anuncios/Create
@@ -46,15 +52,20 @@ namespace ProjetoAspNet
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AnuncioID,Produto,Descrição,Tipo")] Anuncio anuncio)
+        public ActionResult Create([Bind(Include = "AnuncioID,Produto,Descrição,Tipo,Valor,City,Country,State")] Anuncio anuncio)
         {
             if (ModelState.IsValid)
             {
-                int idUsuarioLogando = int.Parse(User.Identity.GetUserId());
-                anuncio.UserID = idUsuarioLogando;
-                db.Anuncios.Add(anuncio);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                string idUsuarioLogando = User.Identity.GetUserId();
+                if (idUsuarioLogando != null)
+                {
+                    anuncio.UserID = idUsuarioLogando;
+                    db.Anuncios.Add(anuncio);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                    return RedirectToAction("Login", "Account");
             }
 
             return View(anuncio);
